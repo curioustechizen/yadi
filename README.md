@@ -34,6 +34,11 @@ All of this can be achieved with Java 8 or using functional programming librarie
 
 **Yadi (यदि)** is the Sanskrit word for "if", hence the name (and the fact that I got lazy trying to come up with a name).
 
+## ToDo
+
+  - [ ] Add methods for primitive types in order to avoid auto boxing
+  - [ ] Think of a meaningful example for the subject and RHS values being of different types
+
 ##LICENSE
 
     Copyright 2016 Kiran Rao
