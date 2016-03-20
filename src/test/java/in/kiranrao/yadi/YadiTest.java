@@ -19,4 +19,13 @@ public class YadiTest {
         assertTrue(Yadi.allOf(SUBJECT, INPUT));
     }
 
+    @Test
+    public void testAllOfIntFailure() throws Exception {
+        final int ONE = 1;
+        final int TWO = 2;
+
+        final int [] INPUT = {ONE, TWO};
+        final int SUBJECT = 1;
+        assertFalse(Yadi.allOf(SUBJECT, INPUT));
+    }
 }
