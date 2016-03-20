@@ -33,6 +33,6 @@ public class YadiTest {
 
     @Test
     public void testAnyOfIgnoreCaseSuccess() throws Exception {
-        assertTrue(Yadi.allOfIgnoreCase("BANGALORE", "Bengaluru", "Bangalore", "Bendakaalooru"));
+        assertTrue(Yadi.anyOfIgnoreCase("BANGALORE", "Bengaluru", "Bangalore", "Bendakaalooru"));
     }
 }

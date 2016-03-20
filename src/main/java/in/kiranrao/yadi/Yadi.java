@@ -45,8 +45,8 @@ public class Yadi {
         return true;
     }
 
-    public static boolean allOfIgnoreCase(String subject, String... rhss) {
-        return allOf(
+    public static boolean anyOfIgnoreCase(String subject, String... rhss) {
+        return anyOf(
                 subject,
                 new BiPredicate<String, String>() {
                     public boolean test(String subject, String rhs) {
