@@ -5,6 +5,10 @@ package in.kiranrao.yadi;
  */
 public class Yadi {
 
+    interface BiPredicate<S,R> {
+        boolean test(S subject, R rhs);
+    }
+
     public static boolean allOf(int subject, int... rhss) {
         for(int r: rhss) {
             if(subject != r)    return false;
@@ -17,5 +21,38 @@ public class Yadi {
             if(subject.equals(r))   return true;
         }
         return false;
+    }
+
+    public static <S, R> boolean allOf(S subject, BiPredicate<S, R> predicate, R... rhss) {
+        for(R r: rhss) {
+            if(!predicate.test(subject, r)) return false;
+        }
+
+        return true;
+    }
+
+    public static <S, R> boolean anyOf(S subject, BiPredicate<S, R> predicate, R... rhss) {
+        for(R r: rhss) {
+            if(predicate.test(subject, r))  return true;
+        }
+        return false;
+    }
+
+    public static <S, R> boolean noneOf(S subject, BiPredicate<S, R> predicate, R... rhss) {
+        for(R r: rhss) {
+            if(predicate.test(subject, r))  return false;
+        }
+        return true;
+    }
+
+    public static boolean allOfIgnoreCase(String subject, String... rhss) {
+        return allOf(
+                subject,
+                new BiPredicate<String, String>() {
+                    public boolean test(String subject, String rhs) {
+                        return subject.equalsIgnoreCase(rhs);
+                    }
+                },
+                rhss);
     }
 }
