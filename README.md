@@ -26,7 +26,7 @@ if(Yadi.anyOfIgnoreCase(name, "awesome", "amazing", "brilliant")){
 
 It doesn't stop there, though. Using the `BiPredicate` interface, you can create your own definition of what constitutes an inclusion or exclusion. In fact, that is exactly how `anyOfIgnoreCase` is implemented.
 
-`Yadi` has methods for testing whether a subject matches all(`allOf`), any(`anyOf`) or none(`noneOf`) of a list of values according to a given criterion.
+`Yadi` has methods for testing whether a subject matches all(`allOf`), any(`anyOf`) or none(`noneOf`) of a list of values according to a given criterion. Note that the subject and the right hand side values do not even need to be of the same type!
 
 ## What's with the name?
 
