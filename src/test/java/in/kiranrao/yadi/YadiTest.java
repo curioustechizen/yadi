@@ -14,9 +14,8 @@ public class YadiTest {
         final int ONE = 1;
         final int ONDU = 1;
         final int EK = 1;
-        final int [] INPUT = {1, ONDU, ONE, EK};
-        final int SUBJECT = 1;
-        assertTrue(Yadi.allOf(SUBJECT, INPUT));
+
+        assertTrue(Yadi.allOf(1, ONDU, ONDU, EK));
     }
 
     @Test
@@ -24,15 +23,16 @@ public class YadiTest {
         final int ONE = 1;
         final int TWO = 2;
 
-        final int [] INPUT = {ONE, TWO};
-        final int SUBJECT = 1;
-        assertFalse(Yadi.allOf(SUBJECT, INPUT));
+        assertFalse(Yadi.allOf(1, ONE, TWO));
     }
 
     @Test
     public void testAllOfStringSuccess() throws Exception {
-        final String []  INPUT = {"Bengaluru", "Bangalore", "Bendakaalooru"};
-        final String SUBJECT = "Bangalore";
-        assertTrue(Yadi.anyOf(SUBJECT, INPUT));
+        assertTrue(Yadi.anyOf("Bangalore", "Bengaluru", "Bangalore", "Bendakaalooru"));
+    }
+
+    @Test
+    public void testAnyOfIgnoreCaseSuccess() throws Exception {
+        assertTrue(Yadi.allOfIgnoreCase("BANGALORE", "Bengaluru", "Bangalore", "Bendakaalooru"));
     }
 }
