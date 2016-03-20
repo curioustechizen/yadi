@@ -11,4 +11,11 @@ public class Yadi {
         }
         return true;
     }
+
+    public static boolean anyOf(String subject, String... rhss) {
+        for(String r: rhss) {
+            if(subject.equals(r))   return true;
+        }
+        return false;
+    }
 }

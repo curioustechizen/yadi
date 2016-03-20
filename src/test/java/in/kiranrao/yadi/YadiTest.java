@@ -28,4 +28,11 @@ public class YadiTest {
         final int SUBJECT = 1;
         assertFalse(Yadi.allOf(SUBJECT, INPUT));
     }
+
+    @Test
+    public void testAllOfStringSuccess() throws Exception {
+        final String []  INPUT = {"Bengaluru", "Bangalore", "Bendakaalooru"};
+        final String SUBJECT = "Bangalore";
+        assertTrue(Yadi.anyOf(SUBJECT, INPUT));
+    }
 }
