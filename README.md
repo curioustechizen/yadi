@@ -1,3 +1,5 @@
+[![Travis](https://img.shields.io/travis/ishan1604/yadi.svg)](https://travis-ci.org/ishan1604/yadi) [![Code Coverage](https://img.shields.io/codecov/c/github/ishan1604/yadi.svg)](https://codecov.io/github/ishan1604/yadi)
+
 Ever seen code like this?
 
 ```java
