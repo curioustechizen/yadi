@@ -1,7 +1,11 @@
-group 'in.kiranrao.yadi'
-version '1.0-SNAPSHOT'
+//Commenting this for use with jitpack. Instead use com.github.curioustechizen
+//group 'in.kiranrao.yadi'
+version '1.0.0'
 
 apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.github.curioustechizen'
 
 sourceCompatibility = 1.5
 
@@ -11,4 +15,33 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+    archives sourcesJar
+    archives javadocJar
+}
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+        }
+    }
 }
