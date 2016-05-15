@@ -4,8 +4,10 @@ version '1.0.0'
 
 apply plugin: 'java'
 apply plugin: 'maven'
-
 group = 'com.github.curioustechizen'
+
+apply plugin: 'jacoco'
+
 
 sourceCompatibility = 1.5
 
@@ -45,3 +47,16 @@ install {
         }
     }
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.9'
+}
+
+check.dependsOn jacocoTestReport
