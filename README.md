@@ -32,6 +32,27 @@ It doesn't stop there, though. Using the `BiPredicate` interface, you can create
 
 All of this can be achieved with Java 8 or using functional programming libraries in older versions of Java. However, use of such libraries might be overkill if all you are looking for is to make such simple conditional checks. `Yadi` aims to fill this gap.
 
+## Download
+
+`Yadi` is distributed using JitPack. Add the following to your top-level build.gradle
+
+```
+allprojects {
+    repositories {
+        ...
+        maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Then, in your module level build.gradle,
+
+```
+dependencies {
+    compile 'com.github.curioustechizen:yadi:1.0.0'
+}
+```
+
 ## What's with the name?
 
 **Yadi (यदि)** is the Sanskrit word for "if", hence the name (and the fact that I got lazy trying to come up with a name).
