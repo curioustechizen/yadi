@@ -50,5 +50,18 @@ public class YadiTest {
         assertFalse(Yadi.allOfIgnoreCase("Made In India", "iNdIa", "MaDE In iNDIA", "MADE IN INDIA"));
     }
 
+    @Test
+    public void testNoneOfSuccess() throws Exception {
+        assertTrue(Yadi.noneOf("Made In India", "iNdIa", "MaDE In iNDIA", "MADE IN INDIA"));
+    }
 
+    @Test
+    public void testNoneOfFailure() throws Exception {
+        assertFalse(Yadi.noneOf("Made In India", "iNdIa", "Made In India", "MADE IN INDIA"));
+    }
+
+    @Test
+    public void testNoneOfIgnoreCaseFailure() throws Exception {
+        assertFalse(Yadi.noneOfIgnoreCase("Made In India", "iNdIa", "MaDE In iNDIA", "MADE IN INDIA"));
+    }
 }
