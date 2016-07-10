@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/curioustechizen/yadi.svg)](https://travis-ci.org/curioustechizen/yadi) [![Code Coverage](https://img.shields.io/codecov/c/github/curioustechizen/yadi.svg)](https://codecov.io/github/curioustechizen/yadi)
+[![Travis](https://img.shields.io/travis/curioustechizen/in.kiranrao.yadi.svg)](https://travis-ci.org/curioustechizen/in.kiranrao.yadi) [![Code Coverage](https://img.shields.io/codecov/c/github/curioustechizen/in.kiranrao.yadi.svg)](https://codecov.io/github/curioustechizen/in.kiranrao.yadi)
 
 Ever seen code like this?
 
@@ -23,9 +23,16 @@ But, what if you wanted to test for something other than just equality? Say, equ
 ```java
 if(Yadi.anyOfIgnoreCase(name, "awesome", "amazing", "brilliant")){
     doSomethingAwesome();
-};
+}
 ```
 
+Using Kotlin, this would be even shorter and even more natural
+
+```kotlin
+if("awesome".anyOf("amazing", "brilliant")) {
+    doSomethingAwesome()
+}
+```
 It doesn't stop there, though. Using the `BiPredicate` interface, you can create your own definition of what constitutes an inclusion or exclusion. In fact, that is exactly how `anyOfIgnoreCase` is implemented.
 
 **Yadi** has methods for testing whether a subject matches all(`allOf`), any(`anyOf`) or none(`noneOf`) of a list of values according to a given criterion. Note that the subject and the right hand side values do not even need to be of the same type!
@@ -49,7 +56,7 @@ Then, in your module level build.gradle,
 
 ```
 dependencies {
-    compile 'com.github.curioustechizen:yadi:1.0.0'
+    compile 'com.github.curioustechizen:in.kiranrao.yadi:1.0.0'
 }
 ```
 
