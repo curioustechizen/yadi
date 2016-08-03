@@ -1,4 +1,4 @@
-[![Travis](https://img.shields.io/travis/curioustechizen/yadi.svg)](https://travis-ci.org/curioustechizen/yadi) [![Code Coverage](https://img.shields.io/codecov/c/github/curioustechizen/yadi.svg)](https://codecov.io/github/curioustechizen/yadi)
+[![Travis](https://img.shields.io/travis/curioustechizen/yadi.svg)](https://travis-ci.org/curioustechizen/yadi) [![Code Coverage](https://img.shields.io/codecov/c/github/curioustechizen/yadi.svg)](https://codecov.io/github/curioustechizen/yadi)  [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Yadi-green.svg?style=true)](https://android-arsenal.com/details/1/4043)
 
 Ever seen code like this?
 
